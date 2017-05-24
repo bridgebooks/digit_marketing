@@ -6,6 +6,7 @@ require('dotenv').config();
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
+const router = require('./server/routes/index')
  
 let app = express()
 
@@ -25,10 +26,8 @@ app.set('views', './server/views')
 //set template engine
 app.set('view engine', 'pug')
 
-//test route
-app.get('/', (req, res) => {
-    res.render('index', { title: 'A title', message: 'A message' })
-})
+//set router
+app.use(router)
 
 app.listen(app.get('port'), () => {
     console.log('Listening on port %d', app.get('port'))
