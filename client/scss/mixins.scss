@@ -1,0 +1,132 @@
+/* Useful SASS Mixins */
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+}
+
+@mixin border-top-radius($radius) {
+   border-top-left-radius: $radius;
+   border-top-right-radius: $radius;
+   -webkit-border-top-left-radius: $radius;
+   -webkit-border-top-right-radius: $radius;
+   -moz-border-top-left-radius: $radius;
+   -moz-border-top-right-radius: $radius;
+   -ms-border-top-left-radius: $radius;
+   -ms-border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+   border-bottom-left-radius: $radius;
+   border-bottom-right-radius: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+   -webkit-border-bottom-right-radius: $radius;
+   -moz-border-bottom-left-radius: $radius;
+   -moz-border-bottom-right-radius: $radius;
+   -ms-border-bottom-left-radius: $radius;
+   -ms-border-bottom-right-radius: $radius;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin transition($transition...) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin animation_name($value) {
+  -webkit-animation-name: $value;
+  -moz-animation-name: $value;
+  animation-name: $value;
+}
+
+@mixin animation_duration($value) {
+  -webkit-animation-duration: $value;
+  -moz-animation-duration: $value;
+  animation-duration: $value;
+}
+
+@mixin animation_timing($value) {
+  -webkit-animation-timing-function: $value;
+  -moz-animation-timing-function: $value;
+  animation-timing-function: $value;
+}
+
+@mixin animation_fill($value) {
+  -webkit-animation-fill-mode: $value;
+  -moz-animation-fill-mode: $value;
+  animation-fill-mode: $value;
+}
+
+@mixin animation_state($value) {
+  -webkit-animation-play-state: $value;
+  -moz-animation-play-state: $value;
+  animation-play-state: $value;
+}
+
+@mixin generate-animation($class_name, $enter_animation, $leave_animation, $duration, $timing_function) {
+  .#{$class_name} {
+    @include animation_duration($duration);
+    @include animation_timing($timing_function);
+    @include animation_fill(backwards);
+
+    &.#{$class_name}-add, &.ng-hide-remove, &.ng-move {
+      @include animation_name($enter_animation);
+    }
+
+    &.#{$class_name}-remove, &.ng-hide {
+      @include animation_name($leave_animation);
+    }
+
+    &.ng-enter {
+      visibility: hidden;
+      @include animation_name($enter_animation);
+      @include animation_state(paused);
+      &.ng-enter-active {
+        visibility: visible;
+        @include animation_state(running);
+      }
+    }
+    &.ng-leave {
+      @include animation_name($leave_animation);
+      @include animation_state(paused);
+      &.ng-leave-active {
+       @include animation_state(running);
+      }
+    }
+  }
+}
+
+@mixin keyframe($name) {
+  @-moz-keyframes #{$name} { @content; }
+  @-webkit-keyframes #{$name} { @content; }
+  @-ms-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
