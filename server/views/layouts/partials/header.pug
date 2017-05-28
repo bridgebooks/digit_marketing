@@ -1,1 +1,17 @@
-header.site__header
+//site__header 
+header.site__header.not-sticky.visible-md.visible-lg
+    .container.clearfix
+        .header__left.pull-left
+            .header__logo
+                a(href="/") #[img.img-responsive(src="/assets/img/logo-white.png" alt="DigIT")]
+        .header__right.pull-right
+            nav.header__nav
+                ul.header__nav__menu.reset__list.clearfix
+                    li.item #[a(href="/features") Features]
+                    li.item #[a(href="/pricing") Pricing]
+                    li.item #[a(href="" target="_blank") Login]
+                    li.item-btn #[a.btn.btn-primary(href="" target="_blank") Sign Up]
+                
+
+//mobile__header    
+header.mobile__header.visible-xs.visible.sm
