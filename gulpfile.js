@@ -31,3 +31,8 @@ gulp
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(config.paths.dest.css))
     })
+
+gulp
+    .task('watch', () => {
+        gulp.watch(config.paths.src.scss, ['sass'])
+    })
