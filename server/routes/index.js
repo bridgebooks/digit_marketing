@@ -3,7 +3,6 @@
 const router = require('express').Router()
 
 router.use((req, res, next) => {
-    console.log('Time: ', Date.now())
     next()
 })
 
@@ -15,4 +14,11 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/features', (req, res) => {
+    res.render('features', {
+        page_title: "Feature Tour",
+        page_description: "DigIT Features",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
 module.exports = router
