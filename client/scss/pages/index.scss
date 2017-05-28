@@ -1,0 +1,17 @@
+#home-page {
+    .hero__section {
+        background: url('../img/heros/home.jpg') no-repeat;
+        background-size: cover;
+        background-position: 55% 0px;
+    }
+}
+
+@include respond-to('large') {
+    #home-page
+    {
+        .hero__section {
+            background-position: 0px -50px;
+            background-attachment: fixed;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@include respond-to('medium') {
+    .site__header
+    {
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        .header__left
+        {
+            .header__logo {
+                width: 250px;
+                a {
+                    display: block;
+                    height: 60px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .header__right
+        {
+            .header__nav__menu {
+                padding: 11px 0px;
+            }
+
+            .header__nav__menu li a {
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+            }
+
+            .header__nav__menu .item 
+            {
+                float: left;
+                a {
+                    display: block;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                }
+            }
+
+            .header__nav__menu .item-btn
+            {
+                float: left;
+            }
+        }
+
+        &.not-sticky {
+            position: absolute;
+            background: transparent;
+            z-index: 1;
+
+            .header__nav__menu .item a {
+                color: #FFF;
+            }
+        }
+
+        &.sticky {
+            position: fixed;
+            z-index: 11;
+        }
+    }
+}

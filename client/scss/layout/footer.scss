@@ -1,0 +1,27 @@
+.site__footer
+{
+    background-color: map-get($colors , 'secondary');
+    min-height: 100px;
+
+    .list__header {
+        color: #FFF;
+        font-size: 1.2em;
+    }
+
+    .footer__links a {
+        color: $footer-link-color;
+        @include transition(color 0.25s ease);
+
+        &:hover {
+            color: $footer-link-hover;
+        }
+    }
+
+    .legal {
+        text-align: center;
+        color: #FFF;
+        p {
+            font-size: .9em;
+        }
+    }
+}
