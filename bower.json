@@ -1,0 +1,21 @@
+{
+  "name": "digit-gateway",
+  "description": "Marketing site for DigIT",
+  "main": "index.js",
+  "authors": [
+    "Reftek"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/reftek/digit_marketing",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
