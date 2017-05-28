@@ -3,6 +3,35 @@
     background-color: map-get($colors , 'secondary');
     min-height: 100px;
 
+    .brand img {
+        margin: 0 auto;
+    }
+
+    .social__links {
+        margin: 0 auto;
+        text-align: center;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                padding: 10px 10px;
+                &.fb {
+                    color: #FFF;
+                }
+
+                &.twitter {
+                    color: map-get($colors , 'primary' );
+                }
+
+                &.ig {
+                    color: #e91e63;
+                }
+            }
+        }
+    }
+
     .list__header {
         color: #FFF;
         font-size: 1.2em;
@@ -22,6 +51,14 @@
         color: #FFF;
         p {
             font-size: .9em;
+        }
+    }
+}
+
+@include respond-to('medium') {
+    .site__footer {
+        .brand img{
+            margin: 0;
         }
     }
 }
