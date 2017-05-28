@@ -7,6 +7,25 @@ html(lang="")
     meta(name="description" content=page_description)
     meta(name="author" content=page_author)
 
+    link(href="/assets/css/base.min.css" rel="stylesheet")
+
   body
     include partials/header.pug
+
+    block content
+
     include partials/footer.pug
+
+    //Font loader
+    script.
+      WebFontConfig = {
+        google: {
+          families: ['Lato', 'Roboto:400,700']
+        }
+      };
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
