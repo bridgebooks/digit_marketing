@@ -4,7 +4,8 @@
 $colors: (
     primary: #0275D8,
     secondary: #2B384C,
-    accent: #202A3D
+    accent: #202A3D,
+    accent-alt: #30CC73,
 );
 
 $hero-default-bg: #4a4a4a; 
@@ -19,8 +20,8 @@ $breakpoints: (
 $hero-sizes: (
     default: 400px,
     small: 400px,
-    medium: 550px,
-    large: 550px
+    medium: 400px,
+    large: 450px
 );
 
 /* Typography Measurements */
