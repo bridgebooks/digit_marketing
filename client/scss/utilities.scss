@@ -9,10 +9,32 @@
     padding-bottom: 20px;
 }
 
+.padding__y40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.margin__yy20 {
+    margin-bottom: 20px;
+}
+
 .ltr__spacing_1 {
     letter-spacing: 1px;
 }
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+/* Font-awesome icon colors */
+.fa-green {
+    color: map-get($colors , 'accent-alt');
 }
