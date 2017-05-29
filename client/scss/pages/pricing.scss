@@ -1,0 +1,10 @@
+#pricing-page {
+    .hero__section {
+        background: url('../img/heros/pricing.jpg') no-repeat;
+        background-size: cover;
+    }
+}
+
+@include respond-to('large') {
+   
+}

@@ -1,0 +1,10 @@
+#features-page {
+    .hero__section {
+        background: url('../img/heros/features.jpg') no-repeat;
+        background-size: cover;
+    }
+}
+
+@include respond-to('large') {
+   
+}

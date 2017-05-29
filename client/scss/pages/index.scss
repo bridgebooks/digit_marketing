@@ -3,6 +3,64 @@
         background: url('../img/heros/home.jpg') no-repeat;
         background-size: cover;
         background-position: 55% 0px;
+
+        .cta__primary, .cta__secondary {
+            color: #FFF;
+        }
+    }
+
+    .showcase__section {
+        position: relative;
+
+        .product__screenshot {
+            max-width: 90%;
+            margin: 0 auto;
+            position: relative;
+            min-height: 300px;
+            top: -55px;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .valueprop__section {
+        background-color: #f1eded; 
+        .prop__title {
+            color: map-get($colors , 'secondary' );
+        }
+    }
+
+    .marketsegment__section {
+        .industry__list {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .industry__list li {
+            text-align: left;
+            padding: 15px 0px;
+            i {
+                color: map-get($colors , 'secondary' );
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@include respond-to('medium') {
+    #home-page
+    {
+        .showcase__section .product__screenshot {
+            max-width: 850px;
+            height: 400px;
+            top: -70px;
+
+            img {
+                height: 100%;
+            }
+        }
     }
 }
 
@@ -11,7 +69,14 @@
     {
         .hero__section {
             background-position: 0px -50px;
-            background-attachment: fixed;
+        }
+
+        .showcase__section .product__screenshot {
+            height: 500px;
+
+            img {
+                height: 100%;
+            }
         }
     }
 }

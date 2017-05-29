@@ -9,12 +9,22 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(74, 74, 74, 0.7)
+        background-color: rgba(74, 74, 74, 0.7);
+
+        .overlay__content {
+            padding: 120px 0 20px;
+        }
+    }
+
+    .hero__title, .hero__subtitle {
+        text-align: center;
+        color: #FFF;
     }
 }
 
 @include respond-to('medium') {
     .hero__section {
         min-height: map-get($hero-sizes, 'medium');
+        background-attachment: fixed !important;
     }
 }
