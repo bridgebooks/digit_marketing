@@ -3,8 +3,117 @@
         background: url('../img/heros/pricing.jpg') no-repeat;
         background-size: cover;
     }
+
+    .pricing__section
+    {
+        .pricing__package_col
+        {
+            .pricing__package {
+                position: relative;
+                background-color: #FFF;
+                z-index: 1;
+                padding: 25px 20px;
+
+                .pricing__package_banner {
+                    display: none;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    color: map-get($colors , 'accent');
+                }
+
+                .pricing__package_description {
+                    font-size: .9em;
+                    line-height: 1.3em;
+                    letter-spacing: .05em;
+                }
+
+                .pricing__package_pricing h2 {
+                    color: map-get($colors, 'accent');
+                }
+            }
+
+            .pricing__package_features
+            {
+                .feature__list li {
+                    padding: 10px 0px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .faq__section
+    {
+        .question__block .question {
+            font-size: 1.3em;
+            letter-spacing: 1px;
+        }
+
+        .question__block .answer {
+            font-size: .9em;
+            line-height: 1.3em;
+            padding: 10px 0px
+        }
+    }
+
+    .pricing__cta__section
+    {
+        background: map-get($colors, 'accent');
+        color: #FFF;
+    }
 }
 
-@include respond-to('large') {
-   
+@include respond-to('medium') {
+   #pricing-page
+   {
+       .pricing__section {
+           margin-top: -40px;
+           background: #f1efef;
+           padding-bottom: 40px;
+       } 
+
+       .pricing__package_col {
+           padding: 0;
+
+           .pricing__package_features {
+               margin-top: 50px;
+
+               &.recommended {
+                   margin-top: 25px !important;
+               }
+           }
+       }
+           
+       .pricing__section .pricing__package {
+           border: 1px solid #CCC;
+           @include border-radius(2px);
+           height: 400px;
+
+           .pricing__package_banner {
+               display: block !important;
+               position: absolute;
+                top: -20px;
+                left: 0;
+                width: 100%;
+                background: #009688;
+                color: #fff;
+                padding: 10px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+           }
+
+           .pricing__package_description {
+               max-height: 70px;
+           }
+
+           &.recommended {
+               height: 420px !important;
+               border: 0;
+               @include box-shadow(0px 3px 10px rgba(50, 50, 50, 0.75));
+               z-index: 4;
+           }
+       }
+   }
 }
