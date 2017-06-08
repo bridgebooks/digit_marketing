@@ -1,0 +1,22 @@
+#features-page {
+    .hero__section {
+        background: url('../img/heros/features.jpg') no-repeat;
+        background-size: cover;
+    }
+
+    .feature__section
+    {
+        .feature__list li {
+            padding: 10px 0px;
+        }
+    }
+    .cta__section
+    {
+        background: map-get($colors, 'accent');
+        color: #FFF;
+    }
+}
+
+@include respond-to('large') {
+   
+}

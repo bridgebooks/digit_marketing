@@ -1,0 +1,35 @@
+doctype html
+html(lang="")
+  head
+    title DigIT - #{page_title}
+    meta(charset="UTF-8")
+    meta(content="IE=edge" http-quiv="X-UA-Compatible")
+    meta(name="description" content=page_description)
+    meta(name="author" content=page_author)
+
+    link(href="/assets/css/base.min.css" rel="stylesheet")
+
+  body
+    include partials/header.pug
+
+    block content
+
+    include partials/footer.pug
+
+    //Font loader
+    script.
+      WebFontConfig = {
+        google: {
+          families: ['Lato', 'Roboto:400,700']
+        },
+        custom: { 
+          families: [ 'FontAwesome' ],
+          urls: [ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+        }
+      };
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);

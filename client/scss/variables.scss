@@ -1,0 +1,32 @@
+//variables.scss
+
+/* Colors */
+$colors: (
+    primary: #373F51,
+    secondary: #2B384C,
+    accent: #202A3D,
+    accent-alt: #59C9A5,
+);
+
+$hero-default-bg: #4a4a4a; 
+
+/* Breakpoints */
+$breakpoints: (
+  'small'  : ( min-width:  767px ),
+  'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px )
+);
+
+$hero-sizes: (
+    default: 400px,
+    small: 400px,
+    medium: 400px,
+    large: 450px
+);
+
+/* Typography Measurements */
+$base_text_size: 15px;
+$base_line_height: 20px;
+
+$footer-link-color: #c3c3c3;
+$footer-link-hover: #FFF;

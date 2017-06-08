@@ -1,0 +1,28 @@
+extends layouts/default.pug
+
+block content
+    .content__wrapper
+        .site__page(id="contact-page")
+            .hero__section
+                .overlay
+                    .container
+                        .overlay__content
+                            h1.hero__title Get in Touch
+                            h3.hero__subtitle Need more information? We are here for you.
+            
+            .contact__form__section
+                .container
+                    .contact__form_box
+                        form
+                            .form-group
+                                input.form-control(type='text' placeholder='Your name')
+                            .form-group
+                                input.form-control(type='email' placeholder='Your email')
+                            .form-group
+                                textarea.form-control(rows='5' placeholder='Your message')
+                            .form-group
+                                button.btn.btn-lg.btn-success.btn-block Send Message
+            
+            .contact__info__section
+                .container-fluid
+                    .row

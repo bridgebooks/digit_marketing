@@ -1,0 +1,44 @@
+.reset__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.padding__y20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.padding__y40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.margin__yy20 {
+    margin-bottom: 20px;
+}
+
+.ltr__spacing_1 {
+    letter-spacing: 1px;
+}
+
+.ltr__spacing_1h {
+    letter-spacing: 1.5px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+/* Font-awesome icon colors */
+.fa-green {
+    color: map-get($colors , 'accent-alt');
+}

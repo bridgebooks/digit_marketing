@@ -1,5 +1,63 @@
-html
-  head
-    title= title
-  body
-    h1= message
+extends layouts/default.pug
+
+block content
+    .content__wrapper
+        .site__page(id="home-page")
+            .hero__section
+                .overlay
+                    .container
+                        .overlay__content
+                            .cta__primary.txt-center
+                                h2 Simple book keeping and more
+                            .cta__secondary.txt-center
+                                h3 Invoicing #[i.fa-green.fa.fa-lg.fa-check-circle-o]
+                                h3 Payroll #[i.fa-green.fa.fa-lg.fa-check-circle-o]
+                                h3 and more #[i.fa-green.fa.fa-lg.fa-ellipsis-h]
+
+            .showcase__section.padding__y20 
+                .container-fluid
+                    .product__screenshot
+                        img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="Product screenshot")
+                    .showcase__cta.txt-center
+                        h3 Take your business to the next level.
+                        a.btn.btn-lg.btn-success(href="") Try DigIT for 15 days
+            
+            .valueprop__section.padding__y40
+                .container
+                    .row
+                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-money]
+                            h4.prop__title Get paid faster 
+                            p Send professional invoices to clients and start accepting online payments. It's simple, fast and convenient.
+                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-pie-chart]
+                            h4.prop__title Track expenses better 
+                            p Know the ins and outs of your business expenses and making better spending decisions and budgets.
+                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-area-chart]
+                            h4.prop__title Powerful Reporting
+                            p Stay on top of your finances with powerful accounting reports like P&amp;L, Balance sheet, and Cash flow statement.
+                    .row
+                        .valueprop__cta.txt-center
+                            a.btn.btn-lg.btn-success(href="/features") Explore more features
+
+            .marketsegment__section.padding__y40
+                .container
+                    .row
+                        h3.txt-center Ideal for businesses across industries
+                    
+                        .col-lg-4.col-md-4
+                            ul.reset__list.txt-center.industry__list
+                                li #[i.fa.fa-lg.fa-share-alt] Marketing
+                                li #[i.fa.fa-lg.fa-camera-retro] Photography
+                                li #[i.fa.fa-lg.fa-building] Real Estate
+                                li #[i.fa.fa-lg.fa-gavel] Legal
+                        .col-lg-4.col-md-4
+                            ul.reset__list.txt-center.industry__list
+                                li #[i.fa.fa-lg.fa-cutlery] Catering Services
+                                li #[i.fa.fa-lg.fa-headphones] Consulting
+                                li #[i.fa.fa-lg.fa-book] Education &amp; Training
+                                li #[i.fa.fa-lg.fa-shopping-bag] Retail
+                        .col-lg-4.col-md-4
+                            ul.reset__list.txt-center.industry__list
+                                li #[i.fa.fa-lg.fa-medkit] Healthcare
+                                li #[i.fa.fa-lg.fa-paint-brush] Cleaning Services
+                                li #[i.fa.fa-lg.fa-file-code-o] Software Development
+                                li #[i.fa.fa-lg.fa-wrench] Engineering
