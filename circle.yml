@@ -1,0 +1,29 @@
+machine:
+  timezone:
+    Africa/Lagos
+  environment:
+    NODE_ENV: development
+    PORT: 8080
+    DEBUG: true
+    LANG: en
+    APP_URL: localhost:4040
+    CONTACT_EMAIL: hello@firstrenaissanceng.com
+
+dependencies:
+  pre:
+    - npm install -g bower
+    - npm install -g pm2
+    - bower install
+  post:
+    - npm install module-deps
+
+test:
+  override:
+    - npm test
+
+deployment:
+    staging:
+        branch: master
+        commands:
+            - rsync -avz ~/digit-marketing/ digit@13.82.105.192:/var/www/digit-marketing/
+            - ./stage.sh

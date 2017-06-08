@@ -7,7 +7,8 @@
   "author": "Reftek",
   "license": "MIT",
   "scripts": {
-    "start": "node index"
+    "start": "pm2 restart config.yml",
+    "test": "echo NO TESTS"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
