@@ -6,7 +6,7 @@ machine:
     PORT: 8080
     DEBUG: true
     LANG: en
-    APP_URL: localhost:4040
+    APP_URL: http://localhost:5040
     CONTACT_EMAIL: hello@firstrenaissanceng.com
 
 dependencies:
