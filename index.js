@@ -20,6 +20,9 @@ app.use(bodyParser.json())
 //set static folder
 app.use(express.static(path.resolve(__dirname, './public')))
 
+//local variables
+app.locals.app_url = process.env.APP_URL
+
 //set folder for views
 app.set('views', './server/views')
 
