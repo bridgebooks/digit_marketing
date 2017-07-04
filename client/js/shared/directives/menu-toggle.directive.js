@@ -8,10 +8,6 @@
     //Directive.$inject = ['$window'];
     /* @ngInject */
     function Directive() {
-        // Usage:
-        //
-        // Creates:
-        //
         var directive = {
             link: link,
             restrict: 'A',
