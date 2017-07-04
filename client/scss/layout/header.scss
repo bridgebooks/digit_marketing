@@ -8,6 +8,7 @@
     &.sticky {
         position: fixed;
         z-index: 11;
+        background-color: #FFF;
     }
 }
 
@@ -89,6 +90,16 @@
         &.not-sticky {
             .header__nav__menu .item a {
                 color: #FFF;
+            }
+        }
+
+        &.sticky {
+            .header__logo img {
+                padding: 10px 0px;
+            }
+
+            .header__nav__menu .item a {
+                color: map-get($colors, 'primary');
             }
         }
     }
