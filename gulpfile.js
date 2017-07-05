@@ -34,7 +34,7 @@ gulp
     .task('sass', () => {
         return gulp.src(config.paths.src.scssMain)
             .pipe(sourcemaps.init())
-            .pipe(sass({ outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
             .pipe(rename({ extname: '.min.css' }))
             .pipe(sourcemaps.write())
             .pipe(gulp.dest(config.paths.dest.css))
