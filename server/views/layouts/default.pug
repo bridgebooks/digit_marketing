@@ -8,10 +8,12 @@ html(lang="" ng-app="digit")
     meta(name="description" content=page_description)
     meta(name="author" content=page_author)
 
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet")
     link(href="/assets/css/base.min.css" rel="stylesheet")
 
   body
     include partials/header.pug
+    include partials/mobile-menu.pug
 
     block content
 
@@ -20,6 +22,7 @@ html(lang="" ng-app="digit")
     //scripts
     script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js")
     script(src="/assets/js/scripts.js")
 
     //Font loader
