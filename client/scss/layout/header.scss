@@ -12,32 +12,6 @@
     }
 }
 
-.mobile__header
-{
-    width: 100%;
-    height: 65px;
-    top: 0;
-    left: 0;
-
-    a.mobile_menu_toggle {
-        display: block;
-        padding: 15px 0px;
-    }
-
-    .header__right {
-        height: 60px;
-        .header__logo img{
-            height: 100%;
-        }
-    }
-
-    &.not-sticky {
-        .mobile_menu_toggle {
-            color: #FFF;
-        }
-    }
-}
-
 @include respond-to('medium') {
     .site__header
     {
