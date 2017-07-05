@@ -46,7 +46,6 @@
         .module('digit.shared')
         .directive('menuToggle', Directive);
 
-    //Directive.$inject = ['$window'];
     /* @ngInject */
     function Directive() {
         var directive = {
@@ -56,6 +55,18 @@
         return directive;
         
         function link(scope, element, attrs) {
+           
+           var menu = document.getElementById('mobile-menu');
+           var $menu = angular.element(menu);
+
+           element.on('click', function (event) {
+               if ($menu.hasClass('open')) {
+                   $menu.removeClass('open').addClass('closed');
+               }
+               else {
+                   $menu.removeClass('closed').addClass('open');
+               }
+           })
         }
     }
 })();
