@@ -1,0 +1,17 @@
+#about-page
+{
+    .hero__section {
+        background: url('../img/heros/pricing.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    .services__section p {
+        line-height: 1.6em;
+    }
+
+    .about__cta__section
+    {
+        background: map-get($colors, 'accent');
+        color: #FFF;
+    }
+}

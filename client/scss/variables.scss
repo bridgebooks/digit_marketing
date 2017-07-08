@@ -2,7 +2,7 @@
 
 /* Colors */
 $colors: (
-    primary: #373F51,
+    primary: #22486f,
     secondary: #2B384C,
     accent: #202A3D,
     accent-alt: #59C9A5,
@@ -18,6 +18,13 @@ $breakpoints: (
 );
 
 $hero-sizes: (
+    default: 400px,
+    small: 400px,
+    medium: 400px,
+    large: 450px
+);
+
+$slider-heights: (
     default: 400px,
     small: 400px,
     medium: 400px,

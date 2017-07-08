@@ -42,3 +42,14 @@
 .fa-green {
     color: map-get($colors , 'accent-alt');
 }
+
+.btn-outline-inverse {
+    background: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+
+    &:hover {
+        background: #FFF;
+        color: map-get($colors , 'primary');
+    }
+}

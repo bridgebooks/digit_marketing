@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('digit', [
-        'digit.shared'
+        'digit.shared',
+        'digit.home'
     ]);
 })();

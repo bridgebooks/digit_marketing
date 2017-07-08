@@ -1,34 +1,32 @@
 #home-page {
     .hero__section {
-        background: url('../img/heros/home.jpg') no-repeat;
-        background-size: cover;
-        background-position: 55% 0px;
-
+        .swiper-container .swiper-slide img {
+            height: 100%;
+        }
         .cta__primary, .cta__secondary {
             color: #FFF;
         }
     }
 
-    .showcase__section {
-        position: relative;
+    .highlights__section
+    {
+        .description h3 {
+            color: map-get($colors , 'primary');
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-        .product__screenshot {
-            max-width: 90%;
+        .image img {
             margin: 0 auto;
-            position: relative;
-            min-height: 300px;
-            top: -55px;
-
-            img {
-                margin: 0 auto;
-            }
+            padding: 15px 0px;
         }
     }
 
-    .valueprop__section {
-        background-color: #f1eded; 
-        .prop__title {
-            color: map-get($colors , 'secondary' );
+    .cta__section {
+        background: map-get($colors , 'primary');
+        color: #FFF;
+        p {
+            line-height: 1.6em;
         }
     }
 
@@ -52,13 +50,10 @@
 @include respond-to('medium') {
     #home-page
     {
-        .showcase__section .product__screenshot {
-            max-width: 850px;
-            height: 400px;
-            top: -70px;
-
-            img {
-                height: 100%;
+        .highlights__section
+        {
+            .description {
+                margin-top: 70px;
             }
         }
     }
@@ -67,16 +62,5 @@
 @include respond-to('large') {
     #home-page
     {
-        .hero__section {
-            background-position: 0px -50px;
-        }
-
-        .showcase__section .product__screenshot {
-            height: 500px;
-
-            img {
-                height: 100%;
-            }
-        }
     }
 }

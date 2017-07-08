@@ -22,9 +22,67 @@
     }
 }
 
+.slider__section {
+    background-color: $hero-default-bg;
+    position: relative;
+
+    .swiper-container {
+        height: 100%;
+
+        .swiper-slide .slide-caption {
+            position: absolute;
+            color: #FFF;
+            text-align: center;
+            bottom: 30px;
+            left: 5%;
+
+            h1 {
+                font-size: 2em;
+                //color: map-get($colors, 'primary');
+                font-weight: 700;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #FFF;
+        }
+
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+@include respond-to('small') {
+    .slider__section
+    {
+        .swiper-slide .slide-caption {
+            bottom: 120px !important;
+            text-align: left !important;
+        }
+    }
+}
+
 @include respond-to('medium') {
     .hero__section {
         min-height: map-get($hero-sizes, 'medium');
         background-attachment: fixed !important;
+    }
+    
+    .slider__section
+    {
+        .swiper-slide .slide-caption {
+            top: 50%;
+            left: 10%;
+            text-align: left !important;
+            width: 430px;
+        }
+
+        .swiper-container .swiper-pagination {
+            bottom: 20%;
+        }
     }
 }

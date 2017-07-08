@@ -1,0 +1,58 @@
+extends layouts/default.pug
+
+block content
+    .content__wrapper
+        .site__page(id="pricing-page")
+            .hero__section
+                .overlay
+                    .container
+                        .overlay__content
+                            h1.hero__title Got questions
+                            h3.hero__subtitle We have answers.
+            
+            .faq__section.padding__y40
+                .container
+                    h2.txt-center.ltr__spacing_1 Frequently Asked Questions
+                    .row
+                        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+                            .row
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question What is DigIT
+                                    p.answer DigIT is a simple accounting and payroll solution that helps individuals and businesses manage their cash flow. This way, you can stay on top of your business finances and have real-time insight to your financial performance.
+
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question How do I sign up?
+                                    p.answer Getting on to the Digit platform is as easy as submitting your basic information. Once you get signed up, you can access the comprehensive platform for 15 days free of charge!
+
+                            .row
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question When do I start getting billed?
+                                    p.answer Once your 15day free trial is over, we hope that you fall in love with our service offerings. This way, you can pick one of the subscription plans. Once subscription plans have been chosen, you can automatically start enjoying Digit on the move.
+
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question How do I manage recurring subscriptions
+                                    p.answer Your Digit subscription is managed through a secured payment platform. Card details will be required, but not to worry, we guarantee that charges will only be incurred when due.
+
+                            .row
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question Can I migrate my data from other software
+                                    p.answer Yes. Migrating from other software to DigIT is seamless. DigIT accepts data in CSV format and data can be easily exported to CSV, Excel and pdf formats.
+
+
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question How do I receive payment from my customers?
+                                    p.answer DigIT makes payments easier. With card payment built directly into your invoices, your customers can easily pay directly into your bank accounts. This automatically reflects in your accounting reports in real-time; thereby making accounting simple and seamless.
+
+                            .row
+                                .col-lg-6.col-md-6.question__block
+                                    h3.question What is Digital Advisory?
+                                    p.answer Digital Advisory is an on-demand online support provided by our in-house financial expert. The focus is to help users on Digit Enterprise plan maximize the use of their solution. Some of the digital advisory module includes-Tax advisory, investment opportunities, financial risk management, financial succession planning, etc.
+                            
+                            .row.padding__y40.txt-center
+                                p Cant find what you are looking for?
+                                a.btn.btn-lg.btn-primary(href="/contact") Contact Us
+        
+            .pricing__cta__section.padding__y40
+                .container.txt-center
+                    h3 Give your business a boost today!
+                    a.btn.btn-lg.btn-outline-inverse.uppercase(href=app_url+"/signup" target="_blank") Start my 15-day trial

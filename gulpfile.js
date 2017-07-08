@@ -14,7 +14,9 @@ const config = {
             js: [
                 './client/js/index.module.js',
                 './client/js/shared/shared.module.js',
-                './client/js/shared/directives/*.js',
+                './client/js/home/home.module.js',
+                './client/js/home/home.controller.js',
+                './client/js/shared/directives/*.js'
             ],
             scripts: './client/js/**/*.js',
             scss: './client/scss/**/*.scss',
