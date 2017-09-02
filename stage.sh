@@ -9,7 +9,7 @@ digit@13.82.105.192 <<EOF
 
     bower install
 
-    npm install
+    yarn install
 
-    npm start
+    yarn start
 EOF
