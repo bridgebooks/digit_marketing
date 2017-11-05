@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "pm2 restart config.yml",
+    "start-dev": "pm2 restart config.dev.yml",
     "test": "echo NO TESTS"
   },
   "dependencies": {
