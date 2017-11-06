@@ -1,3 +1,17 @@
+.site__header, .mobile__header {
+    &.not-sticky {
+        position: absolute;
+        background: transparent;
+        z-index: 2;
+    }
+
+    &.sticky {
+        position: fixed;
+        z-index: 11;
+        background-color: #FFF;
+    }
+}
+
 @include respond-to('medium') {
     .site__header
     {
@@ -48,18 +62,19 @@
         }
 
         &.not-sticky {
-            position: absolute;
-            background: transparent;
-            z-index: 1;
-
             .header__nav__menu .item a {
                 color: #FFF;
             }
         }
 
         &.sticky {
-            position: fixed;
-            z-index: 11;
+            .header__logo img {
+                padding: 15px 0px;
+            }
+
+            .header__nav__menu .item a {
+                color: map-get($colors, 'primary');
+            }
         }
     }
 }

@@ -1,9 +1,9 @@
 //site__header 
-header.site__header.not-sticky.visible-md.visible-lg
+header.site__header.not-sticky.visible-md.visible-lg(sticky-header)
     .container.clearfix
         .header__left.pull-left
             .header__logo
-                a(href="/") #[img.img-responsive(src="/assets/img/logo-white.png" alt="DigIT")]
+                a(href="/") #[img.img-responsive(src="/assets/img/logo-white.png" alt="Bridge Books" flip-sticky)]
         .header__right.pull-right
             nav.header__nav
                 ul.header__nav__menu.reset__list.clearfix
@@ -14,4 +14,9 @@ header.site__header.not-sticky.visible-md.visible-lg
                 
 
 //mobile__header    
-header.mobile__header.visible-xs.visible.sm
+header.mobile__header.not-sticky.visible-sm.visible-xs(sticky-header)
+    .container.clearfix
+        .header__left.pull-left
+            a.mobile_menu_toggle(menu-toggle) #[i.fa.fa-bars.fa-2x]
+        .header__right.pull-right
+            a.header__logo(href="/") #[img.img-responsive(src="/assets/img/logo-white.png" alt="Bridge Books" flip-sticky)]

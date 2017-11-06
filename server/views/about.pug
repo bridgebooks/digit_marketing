@@ -1,0 +1,62 @@
+extends layouts/default.pug
+
+block content
+    .content__wrapper
+        .site__page(id="about-page")
+            .hero__section
+                .overlay
+                    .container
+                        .overlay__content
+                            h1.hero__title Meet Bridge Books
+                            h3.hero__subtitle Your business partner.
+            
+            .overview__section.padding__y40
+                .container
+                    .row
+                        .col-lg-6.col-md-6.padding__y40
+                            p It is a simplified accounting analytics solution that helps you take control of your business and effortlessly manage your finances, so you can focus on making your business grow.
+                            p The smart technology, Bridge Books uses groundbreaking Analytics and algorithms that makes accounting simple for everyone.
+                        .col-lg-3.col-md-3.txt-center
+                            h2 #[i.fa.fa-lg.fa-caret-up] 52 hours
+                            p Small business owners spend #[strong 52] hours a week just keeping up with their business administration.
+                        .col-lg-3.col-md-3.text-center
+                            h2 #[i.fa.fa-lg.fa-caret-up] 36%
+                            p #[strong 36] percent of people responsible for the numbers in small businesses don't have any kind of financial training.
+                    hr
+
+            .services__section.padding__y40
+                .container
+                    h3.txt-center We offer even more
+                    .row
+                        .col-lg-6.col-md-6
+                            h2 Consulting
+                            p Our Consulting services are our soft skills that are peculiar to us. It is more than offering consulting services within Financial Audit, Advisory and Training. What stands out for us is how we deliver tailor-made consulting services so that you always get the best services that suits your business.
+                            
+                        .col-lg-6.col-md-6
+                            h2 Training
+                            p We ensure that your financial books are up to date and tax are properly remitted. We also provide insight to some benefits that you have as a tax payer including tax refunds, mortgages and loans.
+                            p Bringing ideas, insights and solutions to businesses in Africa- First Renaissance training framework is the most personalized, interactive, experiential learning place designed to empower start-up, scale-up and enterprise business champions.
+                        
+
+                    .row
+                        .col-lg-6.col-md-6
+                            h2 Advisory
+                            p We're changing the way millions of small businesses make money, spend money and track money.
+                            p We not only deliver innovative financial solutions, our services include advisory support to ensure that SME’s can become successful Capitalists.
+                            p By providing access to cash flow frameworks (Payments), employee payment (Payroll), Account Receivables (Invoicing), Tax models and Personal Assistant tools, we are providing better business insights to maximize sales and increase profit margins.  First Renaissance ensures that the financial life-cycle of SMEs are covered in order to help them grow and thrive.
+                        
+                        .col-lg-6.col-md-6
+                            h2 Financial Audits
+                            p We ensure that your financial books are up to date and tax are properly remitted. We also provide insight to some benefits that you have as a tax payer including tax refunds, mortgages and loans.
+                            p The scope of our audit are tailored based on individual business and sectors.
+                            h4 Risk Management: 
+                            p We provide comprehensive forecasting and evaluation of financial risks together with the identification of procedures to avoid or minimize their impact on your business. We take into account size, risk profile and the geographical context of the business.
+                            h4 Tax Management: 
+                            p We help you keep check on your books and help businesses address the challenges of tax operations, including tax compliance, reporting, and refunds for direct and indirect taxes.
+                            h4 Investment Management: 
+                            p We are passionate about business growth. We therefore support with developing expansion and growth strategies that best suits your business investment profile.
+
+            .about__cta__section.padding__y40
+                .container.txt-center
+                    h3 Give your business a boost today!
+                    a.btn.btn-lg.btn-outline-inverse.uppercase(href=app_url+"/signup" target="_blank") Start my 15-day trial

@@ -2,4 +2,9 @@ node_modules
 bower_components
 .env
 *.log
+<<<<<<< HEAD
 *.DS_Store
+=======
+.DS_Store
+public/.DS_Store
+>>>>>>> 670765ac44e75c5931e456c6ec1ebbcd04840003

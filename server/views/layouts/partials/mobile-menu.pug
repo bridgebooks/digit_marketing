@@ -1,0 +1,8 @@
+nav.mobile__menu.closed.visible-xs.visible.sm(id="mobile-menu")
+    .mobile__menu_content
+        a.menu__close(menu-toggle) #[i.fa.fa-2x.fa-times]
+        ul.reset__list.menu
+         li #[a(href="/features" menu-toggle) Features]
+         li #[a(href="/pricing" menu-toggle) Pricing]
+         li #[a(href=app_url+"/login" target="_blank" menu-toggle) Login]
+         li #[a(href=app_url+"/signup" target="_blank" menu-toggle) Sign Up]

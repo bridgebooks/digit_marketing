@@ -2,42 +2,49 @@ extends layouts/default.pug
 
 block content
     .content__wrapper
-        .site__page(id="home-page")
-            .hero__section
-                .overlay
-                    .container
-                        .overlay__content
-                            .cta__primary.txt-center
-                                h2 Simple book keeping and more
-                            .cta__secondary.txt-center
-                                h3 Invoicing #[i.fa-green.fa.fa-lg.fa-check-circle-o]
-                                h3 Payroll #[i.fa-green.fa.fa-lg.fa-check-circle-o]
-                                h3 and more #[i.fa-green.fa.fa-lg.fa-ellipsis-h]
-
-            .showcase__section.padding__y20 
-                .container-fluid
-                    .product__screenshot
-                        img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="Product screenshot")
-                    .showcase__cta.txt-center
-                        h3 Take your business to the next level.
-                        a.btn.btn-lg.btn-success(href="") Try DigIT for 15 days
+        .site__page(id="home-page" ng-controller="HomeController as vm")
+            .slider__section
+                .swiper-container
+                    .swiper-wrapper
+                        .swiper-slide(ng-repeat="slide in vm.slides")
+                            img.img-responsive(ng-src="{{ slide.imgUrl }}")
+                            .slide-caption
+                                h1.ltr__spacing_1 {{ slide.caption }}
+                                p {{ slide.subtitle }}
+                    .swiper-pagination
             
-            .valueprop__section.padding__y40
+            .highlights__section.padding__y40
                 .container
-                    .row
-                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-money]
-                            h4.prop__title Get paid faster 
-                            p Send professional invoices to clients and start accepting online payments. It's simple, fast and convenient.
-                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-pie-chart]
-                            h4.prop__title Track expenses better 
-                            p Know the ins and outs of your business expenses and making better spending decisions and budgets.
-                        .col-lg-4.col-md-4.margin__yy20.txt-center #[i.fa.fa-2x.fa-area-chart]
-                            h4.prop__title Powerful Reporting
-                            p Stay on top of your finances with powerful accounting reports like P&amp;L, Balance sheet, and Cash flow statement.
-                    .row
-                        .valueprop__cta.txt-center
-                            a.btn.btn-lg.btn-success(href="/features") Explore more features
+                    .row.padding__y20
+                        .col-lg-6.col-md-6.image.visible-xs.visible-sm
+                            img.img-responsive(src="/assets/img/screens/app-invoices.png" alt="Invoices")
+                        .col-lg-6.col-md-6.col-sm.description
+                            h3 Get paid faster
+                            p Send professional custom invoices to clients in seconds. Track your invoice status so you know when to expect money in your bank account.
+                        .col-lg-6.col-md-6.image.visible-md.visible-lg
+                            img.img-responsive(src="/assets/img/screens/app-invoices.png" alt="Invoices")
 
+                    .row.padding__y20
+                        .col-lg-6.col-md-6.image
+                            img.img-responsive(src="https://files.readme.io/q0n6EYxvRFSPllhMBsYT_online-pay-button.png" alt="Invoices")
+                        .col-lg-6.col-md-6.col-sm.description
+                            h3 Grow your business
+                            p Accept cards payments to get paid faster. You and your customers will love the convenience.
+                    
+                    .row.padding__y20
+                        .col-lg-6.col-md-6.image.visible-xs.visible-sm
+                            img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="accounting")
+                        .col-lg-6.col-md-6.col-sm.description
+                            h3 Keep the books organized
+                            p Know the ins and outs of your business expenses and making better spending decisions and budgets.
+                        .col-lg-6.col-md-6.image.visible-md.visible-lg
+                            img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="accounting")
+            
+            .cta__section.padding__y40
+                .container.txt-center
+                    h3 Take your business to the next level. Try Bridge Books for 15 days
+                    a.btn.btn-outline-inverse.btn-lg(href=app_url+"/signup" target="_blank") Try Bridge Books for 15 days
+            
             .marketsegment__section.padding__y40
                 .container
                     .row
@@ -61,3 +68,9 @@ block content
                                 li #[i.fa.fa-lg.fa-paint-brush] Cleaning Services
                                 li #[i.fa.fa-lg.fa-file-code-o] Software Development
                                 li #[i.fa.fa-lg.fa-wrench] Engineering
+
+            .cta__section.padding__y40
+                .container.txt-center
+                    h3 Are you an accountant?
+                    p Bridge Books brings together all the information accountants need in a simple and user friendly space. #[br] Our toolkit gives your the tools to improve your clients' account.
+                    a.btn.btn-outline-inverse.btn-lg(href="" target="_blank") Download the Whitepaper

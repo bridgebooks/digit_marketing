@@ -1,20 +1,29 @@
 doctype html
-html(lang="")
+html(lang="" ng-app="digit")
   head
-    title DigIT - #{page_title}
+    title Bridge Books - #{page_title}
     meta(charset="UTF-8")
     meta(content="IE=edge" http-quiv="X-UA-Compatible")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
     meta(name="description" content=page_description)
     meta(name="author" content=page_author)
 
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet")
     link(href="/assets/css/base.min.css" rel="stylesheet")
 
   body
     include partials/header.pug
+    include partials/mobile-menu.pug
 
     block content
 
     include partials/footer.pug
+
+    //scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js")
+    script(src="/assets/js/scripts.js")
 
     //Font loader
     script.
@@ -24,7 +33,7 @@ html(lang="")
         },
         custom: { 
           families: [ 'FontAwesome' ],
-          urls: [ '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
+          urls: ['//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
         }
       };
       (function(d) {
