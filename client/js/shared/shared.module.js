@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('digit.shared', []);
+    angular.module('bb.shared', []);
 })();

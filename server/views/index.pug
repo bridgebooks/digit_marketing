@@ -3,72 +3,58 @@ extends layouts/default.pug
 block content
     .content__wrapper
         .site__page(id="home-page" ng-controller="HomeController as vm")
-            .slider__section
+            .hero__section
+                .overlay
+                    .container
+                        .overlay__content
+                            h1.hero__title.txt-left Get paid, track expenses
+                            h1.hero__title.txt-left and manage your finances
+                            p.hero__subtitle.txt-left Work smarter, not harder. Bridge Books makes balancing your books #[br] and diving into insights simple, fast, and convenient.
+                            div.action
+                                a.btn.btn-lg.btn-primary Get Started
+            
+            .highlights__section
                 .swiper-container
                     .swiper-wrapper
-                        .swiper-slide(ng-repeat="slide in vm.slides")
-                            img.img-responsive(ng-src="{{ slide.imgUrl }}")
-                            .slide-caption
-                                h1.ltr__spacing_1 {{ slide.caption }}
-                                p {{ slide.subtitle }}
-                    .swiper-pagination
-            
-            .highlights__section.padding__y40
-                .container
-                    .row.padding__y20
-                        .col-lg-6.col-md-6.image.visible-xs.visible-sm
-                            img.img-responsive(src="/assets/img/screens/app-invoices.png" alt="Invoices")
-                        .col-lg-6.col-md-6.col-sm.description
-                            h3 Get paid faster
-                            p Send professional custom invoices to clients in seconds. Track your invoice status so you know when to expect money in your bank account.
-                        .col-lg-6.col-md-6.image.visible-md.visible-lg
-                            img.img-responsive(src="/assets/img/screens/app-invoices.png" alt="Invoices")
+                        .swiper-slide.padding__y20.txt-center
+                            h1
+                                i.fa.fa-lg.fa-clipboard
+                            h3.uppercase Invoicing
+                            p Send profressional invoices to your clients in seconds and get paid seamlessly via debit/credit cards.
+                        .swiper-slide.padding__y20.txt-center
+                            h1
+                                i.fa.fa-lg.fa-book
+                            h3.uppercase Accounting
+                            p Easy to use book-keeping and reporting system to provide you with visibility into your financials and more. 
+                        .swiper-slide.padding__y20.txt-center
+                            h1
+                                i.fa.fa-lg.fa-users
+                            h3.uppercase Payroll
+                            p Manage employee information and generate your payroll with ease and focus on taking your business to next level.
+                        .swiper-slide.padding__y20.txt-center
+                            h1
+                                i.fa.fa-lg.fa-address-card-o
+                            h3.uppercase Contacts
+                            p Never worry about losing a contact again. See all your contact's information, invoices, and bills at a glance.
+                        .swiper-slide.padding__y20.txt-center
+                            h1
+                                i.fa.fa-lg.fa-area-chart
+                            h3.uppercase Reports
+                            p Easy to understand reports to help you make sense your business's numbers.
 
-                    .row.padding__y20
-                        .col-lg-6.col-md-6.image
-                            img.img-responsive(src="https://files.readme.io/q0n6EYxvRFSPllhMBsYT_online-pay-button.png" alt="Invoices")
-                        .col-lg-6.col-md-6.col-sm.description
-                            h3 Grow your business
-                            p Accept cards payments to get paid faster. You and your customers will love the convenience.
-                    
-                    .row.padding__y20
-                        .col-lg-6.col-md-6.image.visible-xs.visible-sm
-                            img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="accounting")
-                        .col-lg-6.col-md-6.col-sm.description
-                            h3 Keep the books organized
-                            p Know the ins and outs of your business expenses and making better spending decisions and budgets.
-                        .col-lg-6.col-md-6.image.visible-md.visible-lg
-                            img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="accounting")
-            
-            .cta__section.padding__y40
+            .showcase__section
                 .container.txt-center
-                    h3 Take your business to the next level. Try Bridge Books for 15 days
-                    a.btn.btn-outline-inverse.btn-lg(href=app_url+"/signup" target="_blank") Try Bridge Books for 15 days
-            
-            .marketsegment__section.padding__y40
-                .container
                     .row
-                        h3.txt-center Ideal for businesses across industries
-                    
-                        .col-lg-4.col-md-4
-                            ul.reset__list.txt-center.industry__list
-                                li #[i.fa.fa-lg.fa-share-alt] Marketing
-                                li #[i.fa.fa-lg.fa-camera-retro] Photography
-                                li #[i.fa.fa-lg.fa-building] Real Estate
-                                li #[i.fa.fa-lg.fa-gavel] Legal
-                        .col-lg-4.col-md-4
-                            ul.reset__list.txt-center.industry__list
-                                li #[i.fa.fa-lg.fa-cutlery] Catering Services
-                                li #[i.fa.fa-lg.fa-headphones] Consulting
-                                li #[i.fa.fa-lg.fa-book] Education &amp; Training
-                                li #[i.fa.fa-lg.fa-shopping-bag] Retail
-                        .col-lg-4.col-md-4
-                            ul.reset__list.txt-center.industry__list
-                                li #[i.fa.fa-lg.fa-medkit] Healthcare
-                                li #[i.fa.fa-lg.fa-paint-brush] Cleaning Services
-                                li #[i.fa.fa-lg.fa-file-code-o] Software Development
-                                li #[i.fa.fa-lg.fa-wrench] Engineering
-
+                        .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1
+                            .showcase__text
+                                h2 Give your business the tools it needs to be successfull.
+                                p Simple, beautiful, and powerful, Bridge Books gives you the tools and intelligence to take your business to the next level.
+                                a.btn.btn-outline-inverse.btn-lg(href="/features") Learn about Bridge Books 
+                                .extra
+                                    a.btn.btn-link.btn-lg(href=app_url+"/signup" target="_blank") Try Bridge Books for 30 days
+                            .screenshot__holder
+                                img.img-responsive(src="/assets/img/screens/app-dashboard.png" alt="Bridgebooks Dashboard")
+            
             .cta__section.padding__y40
                 .container.txt-center
                     h3 Are you an accountant?

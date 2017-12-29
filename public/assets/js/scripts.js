@@ -1,26 +1,26 @@
 (function() {
     'use strict';
 
-    angular.module('digit', [
-        'digit.shared',
-        'digit.home'
+    angular.module('bb', [
+        'bb.shared',
+        'bb.home'
     ]);
 })();
 (function() {
     'use strict';
 
-    angular.module('digit.shared', []);
+    angular.module('bb.shared', []);
 })();
 (function() {
     'use strict';
 
-    angular.module('digit.home', []);
+    angular.module('bb.home', []);
 })();
 (function() {
     'use strict';
 
     angular
-        .module('digit.home')
+        .module('bb.home')
         .controller('HomeController', HomeController);
 
     HomeController.$inject = ['$rootScope', '$scope'];
@@ -28,38 +28,20 @@
         var vm = this;
         var swiper = null;
 
-        vm.slides = [
-            {
-                //imgUrl: 'https://static1.squarespace.com/static/55a3d162e4b0f223c4ebc083/t/58657932f5e23172079525ae/1483045194959/AdobeStock_119876776.jpeg?format=1500w',
-                imgUrl: '/assets/img/slides/home/1.jpg',
-                caption: 'Track expenses and income.',
-                subtitle: 'Keep track of all your expenses and income with ease.'
-            },
-            {
-                //imgUrl: 'https://static1.squarespace.com/static/56ff0d531d07c090232cef33/t/5705fdf345bf215d13e01a71/1460010490964/iStock_000062786386_Large.jpg?format=2500w',
-                imgUrl: '/assets/img/slides/home/2.jpg',
-                caption: 'Expand your business',
-                subtitle: 'Use insights from reports and plan your next expansion'
-            },
-            {
-                imgUrl: '/assets/img/slides/home/3.jpg',
-                caption: 'Accurate financial documents.',
-                subtitle: 'Get up to date financial documents to help with loans and grants'
-            },
-            {
-                imgUrl: '/assets/img/slides/home/4.jpg',
-                caption: 'Monitor daily sales transactions',
-                subtitle: 'Never miss a sale again.'
-            }
-        ]
-
         var initSlider = function () {
             swiper = new Swiper('.swiper-container', {
                 direction: 'horizontal',
                 loop: true,
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
-                autoplay: 12000
+                autoplay: 12000,
+                slidesPerView: 4,
+                breakpoints: {
+                    480: {
+                      slidesPerView: 1,
+                    },
+                    769: {
+                        slidesPerView: 2
+                    }
+                } 
             });
         }
 
@@ -72,7 +54,7 @@
     'use strict';
 
     angular
-        .module('digit.shared')
+        .module('bb.shared')
         .directive('flipSticky', Directive);
 
     /* @ngInject */
@@ -101,7 +83,7 @@
     'use strict';
 
     angular
-        .module('digit.shared')
+        .module('bb.shared')
         .directive('menuToggle', Directive);
 
     /* @ngInject */
@@ -132,7 +114,7 @@
     'use strict';
 
     angular
-        .module('digit.shared')
+        .module('bb.shared')
         .directive('stickyHeader', Directive);
 
     /* @ngInject */

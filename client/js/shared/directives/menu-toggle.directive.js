@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('digit.shared')
+        .module('bb.shared')
         .directive('menuToggle', Directive);
 
     /* @ngInject */

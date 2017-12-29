@@ -1,5 +1,5 @@
 (function() {
     'use strict';
 
-    angular.module('digit.home', []);
+    angular.module('bb.home', []);
 })();

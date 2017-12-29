@@ -1,24 +1,48 @@
 #home-page {
     .hero__section {
-        .swiper-container .swiper-slide img {
-            height: 100%;
-        }
-        .cta__primary, .cta__secondary {
-            color: #FFF;
-        }
+        background: url('../img/heros/home.jpg') no-repeat;
+        background-size: cover;
     }
 
     .highlights__section
     {
-        .description h3 {
-            color: map-get($colors , 'primary');
-            font-weight: 700;
-            letter-spacing: 1px;
+        background-color: map-get($colors, 'accent-alt');
+        color: #FFF;
+
+        h3 {
+            padding: 0 10px;
         }
 
-        .image img {
-            margin: 0 auto;
-            padding: 15px 0px;
+        .swiper-slide
+        {
+            p {
+                color: #FFF;
+                padding: 15px 10px;
+            }
+        }
+
+        .swiper-slide:nth-child(even) {
+            background-color: map-get($colors , 'primary');
+        }
+    }
+
+    .showcase__section {
+        background-color: map-get($colors, 'accent-alt');
+        color: #FFF;
+
+        .showcase__text 
+        {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            .extra a {
+                color: #FFF;
+                text-decoration: none;
+                
+                &:hover {
+                    color: #CCC;
+                }
+            }
         }
     }
 
@@ -55,6 +79,12 @@
             .description {
                 margin-top: 70px;
             }
+        }
+
+        .showcase__section .showcase__text p {
+            width: 500px;
+            margin: 0 auto;
+            padding: 15px 0px;
         }
     }
 }
