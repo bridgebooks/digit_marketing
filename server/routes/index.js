@@ -63,6 +63,30 @@ router.get('/features/invoicing/acl', (req, res) => {
     })
 })
 
+router.get('/features/payroll', (req, res) => {
+    res.render('features/payroll', {
+        page_title: "Payroll",
+        page_description: "Bridgebooks is a simple online bookkeep and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/payroll/employees', (req, res) => {
+    res.render('features/payroll-employees', {
+        page_title: "Payroll",
+        page_description: "Bridgebooks is a simple online bookkeep and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/payroll/runs', (req, res) => {
+    res.render('features/payroll-runs', {
+        page_title: "Payroll",
+        page_description: "Bridgebooks is a simple online bookkeep and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
 router.get('/pricing', pricingController.index)
 
 router.get('/faqs', (req, res) => {

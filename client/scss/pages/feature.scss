@@ -7,8 +7,11 @@
         }
     }
 
-    &.contacts
+    &.payroll
     {
+        .mini-hero__section {
+            background-color: map-get($colors, 'accent-alt');
+        }
     }
 
     .feature-detail__sidebar {
