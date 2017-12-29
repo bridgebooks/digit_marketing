@@ -51,7 +51,10 @@ gulp
     })
 
 gulp
-    .task('watch', () => {
-        gulp.watch(config.paths.src.scss, ['sass'])
-        gulp.watch(config.paths.src.scripts, ['concat-scripts'])
+    .task('watch', () => { 
+        gulp.watch(config.paths.src.scss, [ 'sass' ])
+        gulp.watch(config.paths.src.scripts, [ 'concat-scripts' ])
     })
+
+//build
+gulp.task('build', [ 'sass', 'concat-scripts' ])
