@@ -17,8 +17,8 @@ router.get('/', (req, res) => {
 
 router.get('/about', (req, res) => {
     res.render('about', {
-        page_title: "About DigIT",
-        page_description: "DigIT is a simple accounting and payroll solution that helps individuals and businesses manage their cash flow. ",
+        page_title: "About Bridgebooks",
+        page_description: "Bridgebooks is a simple accounting and payroll solution that helps individuals and businesses manage their cash flow. ",
         page_author: "First Renaniasance Assoicates"
     })
 })
@@ -26,7 +26,39 @@ router.get('/about', (req, res) => {
 router.get('/features', (req, res) => {
     res.render('features', {
         page_title: "Feature Tour",
-        page_description: "DigIT is a simple online bookkeep and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_description: "Bridgebooks is a simple online bookkeeping and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/invoicing', (req, res) => {
+    res.render('features/invoicing', {
+        page_title: "Invoicing & Payments",
+        page_description: "Bridgebooks is a simple online bookkeep and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/invoicing/invoices', (req, res) => {
+    res.render('features/invoicing', {
+        page_title: "Invoicing & Payments",
+        page_description: "Bridgebooks is a simple online bookkeeping and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/invoicing/payments', (req, res) => {
+    res.render('features/invoicing-payments', {
+        page_title: "Invoicing & Payments",
+        page_description: "Bridgebooks is a simple online bookkeeping and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/features/invoicing/acl', (req, res) => {
+    res.render('features/invoicing-acl', {
+        page_title: "Invoicing & Payments",
+        page_description: "Bridgebooks is a simple online bookkeeping and HR software for busy teams, agencies, fast-growing startups and small businesses everywhere.",
         page_author: "First Renaniasance Assoicates"
     })
 })
@@ -36,7 +68,7 @@ router.get('/pricing', pricingController.index)
 router.get('/faqs', (req, res) => {
     res.render('faqs', {
         page_title: "Frequently Asked Questions",
-        page_description: "Gey answers to yout frequently asked questions about DigIT",
+        page_description: "Gey answers to yout frequently asked questions about Bridgebooks",
         page_author: "First Renaniasance Assoicates"
     })
 });

@@ -1,0 +1,45 @@
+extends ../layouts/default.pug
+
+block content
+    .content__wrapper
+        .site__page.invoicing(id="feature-page")
+            .mini-hero__section
+                .container
+                    .row
+                        .col-lg-12.col-md-12
+                            h1.ltr__spacing_1 Invoicing #[br] &amp; Payments
+                            .row
+                                .col-lg-3.col-md-3
+                                    .hero-text
+                                        hr
+                                        p Instant Payments
+        
+            .feature-detail__section
+                .container
+                    .row
+                        .col-lg-4.col-md-4.feature-detail__sidebar
+                            .panel.panel-default
+                                .panel-heading
+                                    h3.panel-title Invoicing &amp; Payments
+                                ul.list-group
+                                    li.list-group-item 
+                                        a(href="/features/invoicing/invoices") Invoices
+                                    li.list-group-item 
+                                        a(href="/features/invoicing/payments") Instant Payments
+                                    li.list-group-item 
+                                        a(href="/features/invoicing/acl") Access Control
+                        .col-lg-8.col-md-8.feature-detail__content
+                            .row.feature-content
+                                .col-lg-12.col-md-12
+                                    .feature-image
+                                        img.img-responsive(src="/assets/img/screens/bb-invoice-payments.png" alt="payments")
+                                    .row
+                                        .col-lg-12.col-md-12
+                                            p Don’t want the hassle of deal with cash? With our invoicing system, you can accept card payments.
+                                    .row
+                                        .col-lg-6.col-md-6
+                                            h2 Payments
+                                            p We accept all major credit/debit cards; Visa, Verve, Mastercard. Customers can conveniently pay directly from their invoice with the click of a button. Payments to you will automatically be remiited to your designated bank account.
+                                        .col-lg-6.col-md-6
+                                            h2 Fees
+                                            p A flat fee of NGN45 is charged per invoice payment.
