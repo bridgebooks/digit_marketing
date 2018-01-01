@@ -28,6 +28,18 @@
         var vm = this;
         var swiper = null;
 
+        vm.swipeLeft = function () {
+            if (swiper) {
+                swiper.slidePrev();
+            }
+        }
+
+        vm.swipeRight = function () {
+            if (swiper) {
+                swiper.slideNext();
+            }
+        }
+
         var initSlider = function () {
             swiper = new Swiper('.swiper-container', {
                 direction: 'horizontal',
