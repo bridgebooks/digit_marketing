@@ -13,75 +13,56 @@ block content
             .pricing__section
                 .container
                     .row
-                        .col-lg-4.col-md-4.pricing__package_col
-                            .pricing__package.txt-center
-                                h3.ltr__spacing_1h Bridgebooks Easy
-                                h4.pricing__package_description Intuitively designed to keep you on track and prevent errors while managing basic finance and payroll administrative tasks.
-                                .pricing__package_pricing
-                                    h2 NGN 3600
-                                    h4 per Month
-                                .pricing__package_pricing
-                                    h2 NGN 43200
-                                    h4 per Annum
-                                .pricing__package_actions.padding__y20
-                                    .btn-group
-                                        a.btn.btn-lg.btn-default Try It
-                                        a.btn.btn-lg.btn-success Buy Now
-                            .pricing__package_features
-                                ul.feature__list.reset__list.txt-center
-                                    li Up to 5 Users
-                                    li 10 invoices
-                                    li Unlimited Contacts
-                                    li User management
-                                    li Reports
-                                    li Support
-                                    li Two factor authentication
-                                    li SSL and at-rest encryption
-
-                        .col-lg-4.col-md-4.pricing__package_col
-                            .pricing__package.txt-center.recommended
-                                .pricing__package_banner Recommended
-                                h3.ltr__spacing_1h Bridgebooks Pro
-                                h4.pricing__package_description Combine financials with analytics, and transform your digits into insights and have better financially driven strategies. 
-                                .pricing__package_pricing
-                                    h2 NGN 6000
-                                    h4 per Month
-                                .pricing__package_pricing
-                                    h2 NGN 72000
-                                    h4 per Annum
-                                .pricing__package_actions.padding__y20
-                                    .btn-group
-                                        a.btn.btn-lg.btn-default Try It
-                                        a.btn.btn-lg.btn-success Buy Now
-                            .pricing__package_features.recommended
-                                ul.feature__list.reset__list.txt-center
-                                    li All Bridgebooks Easy features, plus;
-                                    li Up to 20 Users
-                                    li Unlimited Invoices
-                                    li Custom invoice templates
-                                    li Invoice attachements
-                                    li Analytics
-                                    li Personal Assistant
-                                        
-                        .col-lg-4.col-md-4.pricing__package_col
-                            .pricing__package.txt-center
-                                h3.ltr__spacing_1h Bridgebooks Enterprise
-                                h4.pricing__package_description Manage significantly larger flow of financial transactions while having real-time business insights needed for sustained growth.
-                                .pricing__package_pricing
-                                    h2 NGN 8000
-                                    h4 per Month
-                                .pricing__package_pricing
-                                    h2 NGN 96000
-                                    h4 per Annum
-                                .pricing__package_actions.padding__y20
-                                    .btn-group
-                                        a.btn.btn-lg.btn-default Try It
-                                        a.btn.btn-lg.btn-success Buy Now
-                            .pricing__package_features
-                                ul.feature__list.reset__list.txt-center
-                                    li All Bridgebooks Pro features, plus;
-                                    li Unlimited Users
-                                    li Digital advisory services
+                        .col-lg-4.col-md-4.pricing__plan
+                            .pricing__plan_inner
+                                h2.pricing__plan_name.txt-center Easy
+                                .plan-cost-wrap
+                                    .plan-cost-alt.txt-center
+                                        strong.strike 3600
+                                    .plan-cost.txt-center
+                                        strong 1999
+                                .plan-details
+                                    ul
+                                        li.accent-alt Accept debit cards and credit cards.
+                                        li.accent-alt Unlimted vendors &amp; customers.
+                                        li.accent-alt Unlimted bookkeeping.
+                                        li.accent-alt Unlimted employees.
+                                        li.accent-alt 1 Payrun/month
+                                        li.accent-alt Reports.
+                                .plan-action
+                                    a.btn.btn-block.btn-lg.btn-primary(href=app_url+"/signup?plan=easy" target="_blank") Start Trial
+                        .col-lg-4.col-md-4.pricing__plan
+                            .pricing__plan_inner
+                                h2.pricing__plan_name.txt-center Pro
+                                .plan-cost-wrap
+                                    .plan-cost-alt.txt-center
+                                        strong.alt.strike 6000
+                                    .plan-cost.txt-center
+                                        strong.alt 3999
+                                .plan-details
+                                    ul
+                                        li.txt-center.list-top Everything in Easy
+                                        li.accent-alt Add and collaborate with team members.
+                                        li.accent-alt Access control.
+                                        li.accent-alt Unlimited Payruns
+                                        li.accent-alt Invoice attachments.
+                                        li.accent-alt Activity logs.
+                                .plan-action
+                                    a.btn.btn-block.btn-lg.btn-success(href=app_url+"/signup?plan=pro" target="_blank") Start Trial
+                        .col-lg-4.col-md-4.pricing__plan
+                            .pricing__plan_inner
+                                h2.pricing__plan_name.txt-center Enterprise
+                                .plan-cost-wrap
+                                    .plan-cost-alt.txt-center
+                                        strong.strike 8000
+                                    .plan-cost.txt-center
+                                        strong 5999
+                                .plan-details
+                                    ul
+                                        li.txt-center.list-top Everything in Pro
+                                        li.accent-alt Digital advisory services.
+                                .plan-action
+                                    a.btn.btn-block.btn-lg.btn-primary(href=app_url+"/signup?plan=enterprise" target="_blank") Start Trial
 
             .faq__section.padding__y40
                 .container
@@ -128,4 +109,4 @@ block content
             .pricing__cta__section.padding__y40
                 .container.txt-center
                     h3 Give your business a boost today!
-                    a.btn.btn-lg.btn-outline-inverse.uppercase(href=app_url+"/signup" target="_blank") Start my 30-day trial
+                    a.btn.btn-lg.btn-outline-inverse.uppercase(href=app_url+"/signup?plan=pro" target="_blank") Start my 30-day trial

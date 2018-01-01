@@ -6,39 +6,95 @@
 
     .pricing__section
     {
-        .pricing__package_col
+        .pricing__plan
         {
-            .pricing__package {
-                position: relative;
-                background-color: #FFF;
-                z-index: 1;
-                padding: 25px 20px;
+            position: relative;
 
-                .pricing__package_banner {
-                    display: none;
-                }
-
-                h3 {
-                    font-weight: 700;
-                    color: map-get($colors , 'accent');
-                }
-
-                .pricing__package_description {
-                    font-size: .9em;
-                    line-height: 1.3em;
-                    letter-spacing: .05em;
-                }
-
-                .pricing__package_pricing h2 {
-                    color: map-get($colors, 'accent');
-                }
-            }
-
-            .pricing__package_features
+            .pricing__plan_inner 
             {
-                .feature__list li {
-                    padding: 10px 0px;
-                    font-weight: bold;
+                position: relative;
+                width: 90%;
+                margin: 0 auto;
+                background: #FFF;
+                @include box-shadow(0 2px 4px rgba(0,0,0,.15));
+
+                .pricing__plan_name {
+                    padding: 15px 15px;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+                
+                .plan-cost-wrap {
+                    border-top: 1px solid #EEE;
+                    border-bottom: 1px solid #EEE;
+                    min-height: 99px;
+                }
+
+                .plan-cost {
+                    margin-top: 20px;
+                }
+
+                .plan-cost-alt {
+                    margin-top: 13px;
+                }
+
+                .plan-cost strong, .plan-cost-alt strong {
+                    font-size: 26px;
+                    line-height: 46px;
+
+                    &.alt {
+                        color: map-get($colors, 'accent-alt');
+                    }
+
+                    &.strike {
+                        text-decoration: line-through;
+                        font-size: 14px !important;
+                        line-height: 28px !important;
+                    }
+
+                    &::before {
+                        content: "\0020A6";
+                    }
+                    &::after {
+                        content: '/mo';
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+
+                .plan-details {
+                    ul 
+                    {
+                        margin: 0;
+                        margin-bottom: 20px;
+                        list-style: none;
+
+                        li {
+                            padding: 10px 20px;
+                            position: relative;
+
+                            &.list-top {
+                                padding: 10px 0px !important;
+                                margin-left: -20px;
+                            }
+                            &.accent-alt
+                            {
+                                &::after {
+                                    font-family: "FontAwesome";
+                                    content: "\f058";
+                                    position: absolute;
+                                    left: 3px;
+                                    top: 11px;
+                                    z-index: 1;
+                                    color: map-get($colors, 'accent-alt');
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .plan-action {
+                    padding: 10px 10px;
                 }
             }
         }
@@ -71,56 +127,19 @@
            margin-top: -40px;
            background: #f1efef;
            padding-bottom: 40px;
-       } 
 
-       .pricing__package_col {
-           padding: 0;
-
-           .pricing__package_features {
-               margin-top: 50px;
-
-               &.recommended {
-                   margin-top: 25px !important;
+           .pricing__plan {
+               height: 600px;
+               .pricing__plan_inner {
+                   height: 100%;
                }
-           }
-       }
-           
-       .pricing__section .pricing__package {
-           border: 1px solid #CCC;
-           @include border-radius(2px);
-           height: 400px;
-           @include transition(all 0.25s ease-in-out);
 
-           .pricing__package_banner {
-               display: block !important;
-               position: absolute;
-                top: -20px;
-                left: 0;
-                width: 100%;
-                background: #009688;
-                color: #fff;
-                padding: 10px;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-           }
-
-           .pricing__package_description {
-               max-height: 70px;
-           }
-
-           &.recommended {
-               height: 420px !important;
-               border: 0;
-               @include box-shadow(0px 3px 10px rgba(50, 50, 50, 0.75));
-               z-index: 4;
-           }
-
-           &:not(.recommended) {
-            &:hover {
-               border: 0;
-               @include box-shadow(0px 3px 10px rgba(50, 50, 50, 0.75));
-               z-index: 5;
-            }
+               .plan-action {
+                   position: absolute;
+                   bottom: 15px;
+                   width: 100%;
+                   margin: 0px auto;
+               }
            }
        }
    }
