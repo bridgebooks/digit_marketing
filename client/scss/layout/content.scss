@@ -83,6 +83,10 @@
     .hero__section {
         min-height: map-get($hero-sizes, 'medium');
         background-attachment: fixed !important;
+
+        .hero__subtitle {
+            max-width: 500px;
+        }
     }
     
     .slider__section
