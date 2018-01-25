@@ -92,7 +92,7 @@ router.get('/pricing', pricingController.index)
 router.get('/faqs', (req, res) => {
     res.render('faqs', {
         page_title: "Frequently Asked Questions",
-        page_description: "Gey answers to yout frequently asked questions about Bridgebooks",
+        page_description: "Get answers to yout frequently asked questions about Bridgebooks",
         page_author: "First Renaniasance Assoicates"
     })
 });

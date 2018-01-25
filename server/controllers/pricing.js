@@ -5,7 +5,7 @@ module.exports = {
 
         res.render('pricing', {
             page_title: "Pricing",
-            page_description: "Start using DigIT today with a free 15-day trial, and pick your plan later.",
+            page_description: "Start using Bridgebooks today with a free 30-day trial, and pick your plan later.",
             page_author: "First Renaniasance Assoicates"
         })
     }
