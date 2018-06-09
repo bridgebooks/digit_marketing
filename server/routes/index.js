@@ -105,4 +105,20 @@ router.get('/contact', (req, res) => {
     })
 })
 
+router.get('/tos', (req, res) => {
+    res.render('tos', {
+        page_title: "Terms of Service",
+        page_description: "Terms of Service",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
+router.get('/privacy', (req, res) => {
+    res.render('privacy', {
+        page_title: "Privacy Policy",
+        page_description: "Privacy Policy",
+        page_author: "First Renaniasance Assoicates"
+    })
+})
+
 module.exports = router
