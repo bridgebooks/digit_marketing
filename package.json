@@ -7,6 +7,7 @@
   "author": "Reftek",
   "license": "MIT",
   "scripts": {
+    "prestart": "yarn build",
     "start": "pm2 restart config.yml",
     "start-dev": "pm2 restart config.dev.yml",
     "build": "./node_modules/.bin/gulp build",
