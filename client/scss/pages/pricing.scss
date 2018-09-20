@@ -32,6 +32,21 @@
 
                 .plan-cost {
                     margin-top: 20px;
+                    &.monthly {
+                        &::after {
+                            content: '/mo';
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+
+                    &.yearly {
+                        &::after {
+                            content: '/yr';
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
                 }
 
                 .plan-cost-alt {
@@ -54,11 +69,6 @@
 
                     &::before {
                         content: "\0020A6";
-                    }
-                    &::after {
-                        content: '/mo';
-                        font-size: 16px;
-                        line-height: 19px;
                     }
                 }
 
